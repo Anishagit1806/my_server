@@ -1,41 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <title>Anisha Server - AI Interface</title>
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <main class="iphone">
-      <section class="div">
-        <header>
-          <h1 class="text-wrapper">ANISHA SERVER</h1>
-          <h2 class="text-wrapper-2">Hello Welcome</h2>
-        </header>
-        <nav class="overlap-group" role="navigation" aria-label="AI options row 1">
-          <button class="rectangle" aria-label="AI option 1">
-            <span class="text-wrapper-3">AI</span>
-          </button>
-          <button class="rectangle-2" aria-label="AI option 2">
-            <span class="text-wrapper-4">AI</span>
-          </button>
-        </nav>
-        <nav class="overlap" role="navigation" aria-label="AI options row 2">
-          <button class="rectangle" aria-label="AI option 3">
-            <span class="text-wrapper-3">AI</span>
-          </button>
-          <button class="rectangle-3" aria-label="AI option 4">
-            <span class="text-wrapper-5">AI</span>
-          </button>
-        </nav>
-        <section class="div-wrapper">
-          <button class="ai-button" aria-label="Main AI option">
-            <span class="text-wrapper-6">AI</span>
-          </button>
-        </section>
-      </section>
-    </main>
-  </body>
-</html>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main container */
+.iphone {
+  width: 360px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.text-wrapper {
+  font-size: 2rem;
+  font-weight: 600;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.text-wrapper-2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #f0f0f0;
+  margin-top: 10px;
+}
+
+/* Navigation rows */
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Button styles */
+.rectangle,
+.rectangle-2,
+.rectangle-3,
+.ai-button {
+  flex: 1;
+  margin: 5px;
+  padding: 12px 0;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.rectangle:hover,
+.rectangle-2:hover,
+.rectangle-3:hover,
+.ai-button:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Text wrappers inside buttons */
+.text-wrapper-3,
+.text-wrapper-4,
+.text-wrapper-5,
+.text-wrapper-6 {
+  display: block;
+  text-align: center;
+}
+
+/* Wrapper for main AI button */
+.div-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
